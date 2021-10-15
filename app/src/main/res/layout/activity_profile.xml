@@ -20,61 +20,150 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
-            app:contentScrim="@color/profilePrimaryDark"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:toolbarId="@+id/toolbar"
+            app:contentScrim="@color/colorPrimaryDark"
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
-            app:expandedTitleTextAppearance="@style/TransparentText">
+            app:expandedTitleTextAppearance="@style/TransparentText"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="401dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@android:drawable/button_onoff_indicator_on"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/a"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    android:id="@+id/linearLayout"
-                    android:background="@drawable/profile_back_button">
+                    android:text="FARHAN RAFI ALFANDI"
+                    android:textSize="34sp"
+                    android:textStyle="bold|italic" />
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="131dp"
-                        android:src="@drawable/itn_mlg_removebg_preview" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="farhanraffi0@gmail.com"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:background="#FF9800"
+                    android:gravity="center">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/textView8"
+                        android:layout_width="81dp"
                         android:layout_height="wrap_content"
-                        android:text="BAYU AJI WICAKSONO"
-                        android:textSize="28dp"
-                        android:textStyle="bold"/>
+                        android:layout_alignStart="@+id/textView4"
+                        android:layout_alignLeft="@+id/textView4"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="303dp"
+                        android:layout_marginLeft="303dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="30dp"
+                        android:text="200"
+                        android:textStyle="bold|italic" />
 
                     <TextView
+                        android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1918105@scholar.itn.ac.id"
-                        android:textSize="12dp"
-                        android:textStyle="bold"/>
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginEnd="256dp"
+                        android:layout_marginRight="256dp"
+                        android:text="Photos" />
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_gravity="bottom"
-                        android:layout_marginTop="20dp"
-                        android:background="@color/profileBackground">
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="157dp"
+                        android:layout_marginLeft="157dp"
+                        android:layout_marginEnd="108dp"
+                        android:layout_marginRight="108dp"
+                        android:text="Followers" />
 
-                        <View
-                            android:layout_alignParentTop="true"
-                            android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:background="@drawable/profile_bk"/>
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="304dp"
+                        android:layout_marginLeft="304dp"
+                        android:layout_marginEnd="-39dp"
+                        android:layout_marginRight="-39dp"
+                        android:text="Following" />
 
-                        <TextView
-                            android:text="Back to\nHome"
-                            style="@style/profileStyledBackButton" />
-                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="81dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/textView4"
+                        android:layout_alignLeft="@+id/textView4"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="305dp"
+                        android:layout_marginRight="305dp"
+                        android:layout_marginBottom="27dp"
+                        android:text="10"
+                        android:textStyle="bold|italic" />
 
-                </LinearLayout>
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="81dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="160dp"
+                        android:layout_marginLeft="160dp"
+                        android:layout_marginEnd="109dp"
+                        android:layout_marginRight="109dp"
+                        android:layout_marginBottom="19dp"
+                        android:text="1000K"
+                        android:textStyle="bold|italic" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -86,7 +175,10 @@
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_profile" />
+    <include
+        layout="@layout/content_profile"
+        android:layout_height="757dp"
+        android:background="#9C27B0" />
 
 
 </android.support.design.widget.CoordinatorLayout>
